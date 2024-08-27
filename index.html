@@ -24,9 +24,16 @@
 			<img src="images/dragon9.png" alt="dragon9" data-name="Meleys" />
 		</section>
 		<p id="dName">Vhagar</p>
-		<audio autoplay loop>
+		<iframe
+			src="sound.mp3"
+			type="audio/mp3"
+			allow="autoplay"
+			id="audio"
+			style="display: none"></iframe>
+		<audio autoplay muted>
 			<source src="sound.mp3" type="audio/mp3" />
 		</audio>
+
 		<script>
 			document.addEventListener("DOMContentLoaded", function () {
 				const dragonSection = document.getElementById("dragonSection")
