@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style.css" />
+		<title>Css Demonstration</title>
+	</head>
+	<body>
+		<div>Css Demos:</div>
+		<h2>Hover Over Black</h2>
+		<video autoplay loop>
+			<source src="bg.mp4" type="video/mp4" />
+		</video>
+		<section id="dragonSection">
+			<img src="images/dragon1.png" alt="dragon1" data-name="Drogon" />
+			<img src="images/dragon2.png" alt="dragon2" data-name="Rhaegal" />
+			<img src="images/dragon3.png" alt="dragon3" data-name="Viserion" />
+			<img src="images/dragon4.png" alt="dragon4" data-name="Balerion" />
+			<img src="images/dragon5.png" alt="dragon5" data-name="Vhagar" />
+			<img src="images/dragon6.png" alt="dragon6" data-name="Meraxes" />
+			<img src="images/dragon7.png" alt="dragon7" data-name="Caraxes" />
+			<img src="images/dragon8.png" alt="dragon8" data-name="Syrax" />
+			<img src="images/dragon9.png" alt="dragon9" data-name="Meleys" />
+		</section>
+		<p id="dName">Vhagar</p>
+		<script>
+			document.addEventListener("DOMContentLoaded", function () {
+				const dragonSection = document.getElementById("dragonSection")
+				const dragonNameElement = document.getElementById("dName")
+
+				dragonSection.addEventListener("mouseover", function (event) {
+					if (event.target.tagName === "IMG") {
+						const dragonName =
+							event.target.getAttribute("data-name")
+
+						dragonNameElement.textContent = dragonName
+					}
+				})
+
+				dragonSection.addEventListener("mouseout", function (event) {
+					if (event.target.tagName === "IMG") {
+						dragonNameElement.textContent = "Vhagar"
+					}
+				})
+			})
+		</script>
+	</body>
+</html>
